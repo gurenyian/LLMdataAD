@@ -135,7 +135,6 @@ python run_complete_experiment.py
 实验完成后，结果保存在 `data/results/` 目录下：
 
 - `innovation_experiment_[timestamp].json`: 完整实验数据
-- `innovation_report_[timestamp].txt`: 详细文本报告
 - `logs/`: 运行日志文件
 
 ## 🔧 配置说明
@@ -147,35 +146,7 @@ python run_complete_experiment.py
 - 质量改进阈值
 - 各模块详细参数
 
-## 📝 使用示例
 
-```python
-from experiments.main_experiment import LLMRecommendationInnovationExperiment
-
-# 创建实验实例
-experiment = LLMRecommendationInnovationExperiment()
-
-# 准备真实数据
-real_data = ["0 1 2 3", "1 4 5 6", "2 7 8 9"]
-
-# 运行实验
-results = experiment.run_complete_experiment(real_data)
-
-# 查看结果
-print(f"创新评分: {results['comprehensive_evaluation']['innovation_score']:.3f}")
-```
-
-## 🤝 贡献指南
-
-1. Fork 项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
 
 ## 🙏 致谢
 
