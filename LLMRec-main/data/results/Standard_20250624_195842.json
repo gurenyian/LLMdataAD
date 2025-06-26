@@ -1,0 +1,179 @@
+{
+  "experiment_metadata": {
+    "name": "Standard",
+    "timestamp": "2025-06-24T19:58:42.258886",
+    "config": {
+      "experiment_name": "Standard",
+      "data_config": {
+        "n_users": 1000,
+        "n_items": 500,
+        "n_train_users": 300,
+        "max_interactions": 15
+      },
+      "framework_config": {
+        "max_iterations": 5,
+        "samples_per_iteration": 100
+      }
+    }
+  },
+  "data_summary": {
+    "users_generated": 300,
+    "total_interactions": 1022,
+    "avg_interactions_per_user": 3.4066666666666667
+  },
+  "framework_results": {
+    "real_data_analysis": {
+      "feature_vector": [
+        3.4066666666666667,
+        2.869603147165514,
+        0.4113829093281148,
+        0.6333333333333333,
+        0.29,
+        0.07666666666666666,
+        2.010396357457434,
+        2.9452449567723344,
+        5.551944814424665,
+        0.4873531584676032,
+        0.9164265129682997,
+        0.31988472622478387,
+        0.48816833363849765,
+        0.694,
+        0.41210374639769454,
+        3.4066666666666667,
+        2.869603147165514,
+        2.0103963536050897,
+        0.4113829093281148,
+        0.997696,
+        0.002304,
+        0.3,
+        0.694
+      ],
+      "user_stats": {
+        "mean": 3.4066666666666667,
+        "std": 2.869603147165514,
+        "gini": 0.4113829093281148,
+        "quantiles": [
+          1.0,
+          1.0,
+          2.0,
+          4.0,
+          7.0
+        ],
+        "entropy": 2.010396357457434,
+        "user_type_ratios": {
+          "low_active": 0.6333333333333333,
+          "mid_active": 0.29,
+          "high_active": 0.07666666666666666
+        },
+        "max_activity": 15,
+        "min_activity": 1,
+        "unique_users": 300
+      },
+      "item_stats": {
+        "mean": 2.9452449567723344,
+        "std": 5.551944814424665,
+        "gini": 0.4873531584676032,
+        "long_tail_ratio": 0.9164265129682997,
+        "head_ratio": 0.31988472622478387,
+        "entropy": 0.48816833363849765,
+        "category_ratios": {
+          "cold_start": 0.41210374639769454,
+          "low_popularity": 0.5043227665706052,
+          "mid_popularity": 0.07204610951008646,
+          "high_popularity": 0.011527377521613832
+        },
+        "max_popularity": 76,
+        "unique_items": 347,
+        "coverage": 0.694
+      },
+      "interaction_stats": {
+        "avg_session_length": 3.4066666666666667,
+        "session_length_std": 2.869603147165514,
+        "session_length_dist": [
+          82,
+          72,
+          36,
+          42,
+          23,
+          14,
+          5,
+          3,
+          3,
+          6,
+          7,
+          1,
+          1,
+          2,
+          3
+        ],
+        "session_entropy": 2.0103963536050897,
+        "max_session_length": 15,
+        "min_session_length": 1,
+        "session_length_gini": 0.4113829093281148,
+        "avg_interaction_interval": 72.28531855955679,
+        "interaction_interval_std": 91.06371414434393
+      },
+      "sparsity_stats": {
+        "overall_sparsity": 0.997696,
+        "interaction_density": 0.002304,
+        "avg_interactions_per_user": 1.152,
+        "avg_interactions_per_item": 2.304,
+        "user_coverage": 0.3,
+        "item_coverage": 0.694
+      },
+      "feature_names": [
+        "user_mean_activity",
+        "user_activity_std",
+        "user_activity_gini",
+        "low_active_ratio",
+        "mid_active_ratio",
+        "high_active_ratio",
+        "user_entropy",
+        "item_mean_popularity",
+        "item_popularity_std",
+        "item_popularity_gini",
+        "long_tail_ratio",
+        "head_ratio",
+        "item_entropy",
+        "item_coverage",
+        "cold_start_ratio",
+        "avg_session_length",
+        "session_length_std",
+        "session_entropy",
+        "session_gini",
+        "overall_sparsity",
+        "interaction_density",
+        "user_coverage",
+        "item_coverage"
+      ]
+    },
+    "iterations": [],
+    "convergence_history": [],
+    "quality_history": [],
+    "config": {
+      "max_iterations": 5,
+      "samples_per_iteration": 100,
+      "adversarial_rounds": 3,
+      "quality_threshold": 0.6,
+      "convergence_tolerance": 0.05,
+      "early_stopping": true,
+      "min_improvement_threshold": 0.01,
+      "max_no_improvement_iterations": 3
+    },
+    "final_metrics": {
+      "total_execution_time": 0.24461889266967773,
+      "total_iterations": 0,
+      "best_convergence_score": 0,
+      "final_convergence_score": 0,
+      "best_quality_score": 0,
+      "total_generated_samples": 0,
+      "total_filtered_samples": 0
+    },
+    "comprehensive_evaluation": {
+      "adversarial_success_rate": NaN,
+      "long_tail_activation": NaN,
+      "generalization_robustness": NaN,
+      "overall_innovation_score": NaN
+    }
+  }
+}

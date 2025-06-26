@@ -1,0 +1,3 @@
+2025-06-25 12:17:59,768 - INFO - ✅ 已启用DeepSeek真实LLM模式
+2025-06-25 12:17:59,769 - ERROR - ❌ 模块初始化失败: 'DataDistributionAnalyzer' object has no attribute '_default_config'
+2025-06-25 12:17:59,769 - ERROR - ❌ DeepSeek实验失败: 'DataDistributionAnalyzer' object has no attribute '_default_config'

@@ -1,0 +1,468 @@
+{
+  "experiment_metadata": {
+    "name": "Enhanced_Netflix_Adversarial_Standard",
+    "timestamp": "2025-06-26T13:59:44.837650",
+    "dataset_path": "D:\\VScode\\LLMRec-main\\data\\netflix\\item_attribute.csv",
+    "config": {
+      "experiment_name": "Netflix_Adversarial_Standard",
+      "enhancement_config": {
+        "augmentation_ratio": 0.3,
+        "diversity_boost": true,
+        "long_tail_emphasis": true,
+        "synthetic_users": 0.2
+      },
+      "framework_config": {
+        "max_iterations": 3,
+        "samples_per_iteration": 25,
+        "adversarial_rounds": 3,
+        "enable_true_adversarial": true,
+        "deepseek_api_key": "sk-ceea9c92478e41c2bd9414325bfd311e"
+      }
+    },
+    "llm_provider": "DeepSeek",
+    "adversarial_mode": "True Adversarial"
+  },
+  "dataset_loading": {
+    "n_items": 17362,
+    "n_users": 1000,
+    "items_loaded": 17362,
+    "year_range": [
+      1896.0,
+      2005.0
+    ]
+  },
+  "dataset_enhancement": {
+    "diversity_boost": {
+      "users_enhanced": 51
+    },
+    "long_tail_emphasis": {
+      "long_tail_items": 0,
+      "users_enhanced": 0
+    },
+    "synthetic_users": {
+      "synthetic_users_added": 159
+    },
+    "user_augmentation": {
+      "users_augmented": 286
+    }
+  },
+  "framework_results": {
+    "dataset_info": {
+      "original_dataset": {
+        "users": 796,
+        "items": 17362,
+        "interactions": 6047
+      },
+      "enhanced_dataset": {
+        "users": 955,
+        "items": 17362,
+        "interactions": 7660
+      },
+      "enhancement_stats": {
+        "original_users": 796,
+        "enhanced_users": 955,
+        "original_interactions": 6359,
+        "enhanced_interactions": 7660,
+        "enhancement_ratio": 1.2045919169680768,
+        "strategies_applied": [
+          "diversity_boost",
+          "long_tail_emphasis",
+          "synthetic_users",
+          "user_augmentation"
+        ]
+      },
+      "dataset_metadata": {
+        "total_items": 17362,
+        "year_distribution": {
+          "count": 17362.0,
+          "mean": 1990.2672503167837,
+          "std": 16.48801426130136,
+          "min": 1896.0,
+          "25%": 1985.0,
+          "50%": 1997.0,
+          "75%": 2002.0,
+          "max": 2005.0
+        },
+        "sample_titles": [
+          "Catch 22",
+          "Crash Dive",
+          "Catch Me If You Can: Bonus Material",
+          "Tarzan 2",
+          "Just Before Dawn",
+          "Sleepaway Camp II: Unhappy Campers",
+          "Strait Jacket",
+          "Bewitched: Season 2",
+          "Eddie Griffin: Voodoo Child",
+          "Motley Crue: Carnival of Sins"
+        ],
+        "max_user_id": 954
+      }
+    },
+    "real_data_analysis": {
+      "feature_vector": [
+        8.020942408376964,
+        3.1472719262617015,
+        0.22229573633343813,
+        0.9989528795811519,
+        0.1596586265624087,
+        8.657280714860816,
+        0.8049608355091383,
+        0.35,
+        8.020942408376964,
+        3.1472719262617015,
+        8.0,
+        0.04502617801047121,
+        0.31099476439790574,
+        0.560313011658059,
+        0.2481675392670157,
+        0.7518324607329843,
+        0.0
+      ],
+      "user_stats": {
+        "mean": 8.020942408376964,
+        "std": 3.1472719262617015
+      },
+      "item_stats": {
+        "gini": 0.1596586265624087,
+        "long_tail_ratio": 0.65
+      }
+    },
+    "iterations": [
+      {
+        "iteration": 1,
+        "prompt_result": {
+          "optimized_prompt": "\n请生成推荐系统的用户-物品交互数据，要求如下：\n\n数据特征要求：\n1. 用户平均交互数约8.0个物品\n2. 物品流行度基尼系数约0.16\n3. 长尾物品比例约0.65\n\n格式要求：\n- 每行一个用户的交互记录\n- 格式：用户ID 物品ID1 物品ID2 物品ID3...\n- 用户ID范围：0-999，物品ID范围：0-499\n- 每个用户2-10个不重复物品交互\n\n请生成真实、多样化的推荐系统交互数据。\n",
+          "feedback": "首次生成，请确保数据真实性和多样性",
+          "iteration": 0,
+          "prompt_version": "v1",
+          "adjustment_details": {
+            "critical_dimensions": [],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 0.0
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 42 137 892 4503 11258 15672",
+          "1972 1942",
+          "2 315 7834 12045 15623 16789 17201",
+          "2049 2017 2016",
+          "3 127 5 18 94",
+          "1994 2017",
+          "4 888 12345 13456 14567 15678",
+          "5 100",
+          "5 73 500 1500 2500 3500 4500 5500 6500",
+          "6 204 3000 6000 9000 12000 15000",
+          "7 511 42 4242 424",
+          "8 999 1999 2999 3999 4999 5999",
+          "90 1990 2010",
+          "9 66 666 6666",
+          "1980 2018",
+          "10 0 1 2 3 4 5 6 7 8",
+          "1 0 16",
+          "2 65 50 8681",
+          "3 1 2000",
+          "4 1000 1999",
+          "5 3 15 2 10",
+          "1 42 137 892 4512 7834 11209 15672",
+          "2 315 56 2345 6789 12345 16789",
+          "3 789 345 678 9012 13456 15789 17234",
+          "4 127 12 3456 7890 12345 14567 16789"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.9837755339556363,
+        "quality_metrics": {
+          "avg_quality": 0.5,
+          "rounds_completed": 0,
+          "final_sample_count": 25,
+          "deception_rate": 0,
+          "adversarial_evolution": 0
+        },
+        "llm_used": true,
+        "true_adversarial_used": true,
+        "adversarial_details": {
+          "final_samples": [
+            "1 42 137 892 4503 11258 15672",
+            "1972 1942",
+            "2 315 7834 12045 15623 16789 17201",
+            "2049 2017 2016",
+            "3 127 5 18 94",
+            "1994 2017",
+            "4 888 12345 13456 14567 15678",
+            "5 100",
+            "5 73 500 1500 2500 3500 4500 5500 6500",
+            "6 204 3000 6000 9000 12000 15000",
+            "7 511 42 4242 424",
+            "8 999 1999 2999 3999 4999 5999",
+            "90 1990 2010",
+            "9 66 666 6666",
+            "1980 2018",
+            "10 0 1 2 3 4 5 6 7 8",
+            "1 0 16",
+            "2 65 50 8681",
+            "3 1 2000",
+            "4 1000 1999",
+            "5 3 15 2 10",
+            "1 42 137 892 4512 7834 11209 15672",
+            "2 315 56 2345 6789 12345 16789",
+            "3 789 345 678 9012 13456 15789 17234",
+            "4 127 12 3456 7890 12345 14567 16789"
+          ],
+          "final_quality_score": 0.5,
+          "adversarial_summary": "对抗训练未完成"
+        }
+      },
+      {
+        "iteration": 2,
+        "prompt_result": {
+          "optimized_prompt": "请生成推荐系统的用户-物品交互数据\n\n请按以下格式生成数据：每行一个用户的交互记录，格式为'用户ID 物品ID1 物品ID2 ...'，用户ID和物品ID都是正整数。",
+          "feedback": "第1轮优化建议：增加用户交互数量，提高平均活跃度",
+          "iteration": 1,
+          "prompt_version": "v2",
+          "adjustment_details": {
+            "critical_dimensions": [
+              "user_activity_mean",
+              "user_activity_std"
+            ],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 1.1152077214854585
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 12 543 8921 12045 6732 15432 4211",
+          "2 45 7654 321 9876 5432 11234",
+          "3 78 12345 4567 234 8765 4321 765 1987",
+          "4 123 6543 987 3456 7890 1234 5678 9012",
+          "5 256 4321 8765 2345 6789 123",
+          "6 312 9876 5432 1098 7654 3210 6543",
+          "7 487 1234 5678 9012 3456 7890 2345",
+          "8 532 8765 4321 987 543 2109 876 15432",
+          "9 689 2345 6789 123 4567 8901",
+          "10 901 5432 1098 7654 3210 6543 9876 4321",
+          "1 4 8 2 3 15",
+          "2 35 15000 65",
+          "4 543 321 15432 12345",
+          "78 80",
+          "6 5432 8765",
+          "1 12 8432 12589 567 9821 4321 15673",
+          "2 45 231 4789 8923 11245 15002",
+          "3 78 15670 15671 15672 15669 15668",
+          "4 123 543 876 1290 3456 7890 12345 16789",
+          "4 3",
+          "5 256 6721 6722 6723 8912",
+          "6 312 1234 5678 9012 3456 7891",
+          "7 489 17200 17201 17199 17198 17197",
+          "8 567 4321 8765 123 4567 9876 5432",
+          "2 3 2"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.9886049804119609,
+        "quality_metrics": {
+          "avg_quality": 0.5,
+          "rounds_completed": 0,
+          "final_sample_count": 25,
+          "deception_rate": 0,
+          "adversarial_evolution": 0
+        },
+        "llm_used": true,
+        "true_adversarial_used": true,
+        "adversarial_details": {
+          "final_samples": [
+            "1 12 543 8921 12045 6732 15432 4211",
+            "2 45 7654 321 9876 5432 11234",
+            "3 78 12345 4567 234 8765 4321 765 1987",
+            "4 123 6543 987 3456 7890 1234 5678 9012",
+            "5 256 4321 8765 2345 6789 123",
+            "6 312 9876 5432 1098 7654 3210 6543",
+            "7 487 1234 5678 9012 3456 7890 2345",
+            "8 532 8765 4321 987 543 2109 876 15432",
+            "9 689 2345 6789 123 4567 8901",
+            "10 901 5432 1098 7654 3210 6543 9876 4321",
+            "1 4 8 2 3 15",
+            "2 35 15000 65",
+            "4 543 321 15432 12345",
+            "78 80",
+            "6 5432 8765",
+            "1 12 8432 12589 567 9821 4321 15673",
+            "2 45 231 4789 8923 11245 15002",
+            "3 78 15670 15671 15672 15669 15668",
+            "4 123 543 876 1290 3456 7890 12345 16789",
+            "4 3",
+            "5 256 6721 6722 6723 8912",
+            "6 312 1234 5678 9012 3456 7891",
+            "7 489 17200 17201 17199 17198 17197",
+            "8 567 4321 8765 123 4567 9876 5432",
+            "2 3 2"
+          ],
+          "final_quality_score": 0.5,
+          "adversarial_summary": "对抗训练未完成"
+        }
+      },
+      {
+        "iteration": 3,
+        "prompt_result": {
+          "optimized_prompt": "请生成推荐系统的用户-物品交互数据\n\n请按以下格式生成数据：每行一个用户的交互记录，格式为'用户ID 物品ID1 物品ID2 ...'，用户ID和物品ID都是正整数。",
+          "feedback": "第2轮优化建议：增加用户交互数量，提高平均活跃度",
+          "iteration": 2,
+          "prompt_version": "v3",
+          "adjustment_details": {
+            "critical_dimensions": [
+              "user_activity_mean",
+              "user_activity_std"
+            ],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 0.9204638017923149
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 0 12543 8921 4567 3210 15029 17360 3 2010 2 1",
+          "2 1 42 87 120 356 1984 500 1024 1980",
+          "3 2 17001 16895 15022 13200 4 2020",
+          "4 3 12345 5432 9999 17359 10000 2",
+          "5 4 666 777 888 1234 2345 3456 4567 7",
+          "6 5 15000 15001 15002 15003 4",
+          "7 6 100 101 102 103 104 105 106 107 8",
+          "8 7 5000 5001 17200 17201 2",
+          "9 8 3000 3001 3002 3003 3004 5 2000",
+          "10 9 123 456 789 1234 5678 9012 2",
+          "5 7 8 2",
+          "35 7 20 0 65",
+          "2010 55 45",
+          "8 4 6 8 3 15",
+          "1 0 1245 8762 15023 42 9834 567",
+          "2 1 7321 15432 89 12045 6321 3 257",
+          "3 2 543 12987 7654 3210 9876 2345 11209",
+          "4 3 8765 4321 15678 23 6543 2109",
+          "5 4 3456 12765 876 5432 987 65 1234",
+          "6 5 9876 543 21765 8765 321 10987 4567",
+          "7 6 2345 17654 987 6543 2109 876 5432",
+          "8 7 6543 18765 432 1098 7654 3210 987",
+          "9 8 3210 16789 543 2109 8765 4321 109",
+          "10 9 1098 15432 765 4321 9876 5432 210",
+          "1 2 8 6 4"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.987876723804954,
+        "quality_metrics": {
+          "avg_quality": 0.5,
+          "rounds_completed": 0,
+          "final_sample_count": 25,
+          "deception_rate": 0,
+          "adversarial_evolution": 0
+        },
+        "llm_used": true,
+        "true_adversarial_used": true,
+        "adversarial_details": {
+          "final_samples": [
+            "1 0 12543 8921 4567 3210 15029 17360 3 2010 2 1",
+            "2 1 42 87 120 356 1984 500 1024 1980",
+            "3 2 17001 16895 15022 13200 4 2020",
+            "4 3 12345 5432 9999 17359 10000 2",
+            "5 4 666 777 888 1234 2345 3456 4567 7",
+            "6 5 15000 15001 15002 15003 4",
+            "7 6 100 101 102 103 104 105 106 107 8",
+            "8 7 5000 5001 17200 17201 2",
+            "9 8 3000 3001 3002 3003 3004 5 2000",
+            "10 9 123 456 789 1234 5678 9012 2",
+            "5 7 8 2",
+            "35 7 20 0 65",
+            "2010 55 45",
+            "8 4 6 8 3 15",
+            "1 0 1245 8762 15023 42 9834 567",
+            "2 1 7321 15432 89 12045 6321 3 257",
+            "3 2 543 12987 7654 3210 9876 2345 11209",
+            "4 3 8765 4321 15678 23 6543 2109",
+            "5 4 3456 12765 876 5432 987 65 1234",
+            "6 5 9876 543 21765 8765 321 10987 4567",
+            "7 6 2345 17654 987 6543 2109 876 5432",
+            "8 7 6543 18765 432 1098 7654 3210 987",
+            "9 8 3210 16789 543 2109 8765 4321 109",
+            "10 9 1098 15432 765 4321 9876 5432 210",
+            "1 2 8 6 4"
+          ],
+          "final_quality_score": 0.5,
+          "adversarial_summary": "对抗训练未完成"
+        }
+      }
+    ],
+    "convergence_history": [
+      0.9837755339556363,
+      0.9886049804119609,
+      0.987876723804954
+    ],
+    "quality_history": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "config": {
+      "max_iterations": 3,
+      "samples_per_iteration": 25,
+      "adversarial_rounds": 3,
+      "quality_threshold": 0.7,
+      "convergence_tolerance": 0.05,
+      "early_stopping": true,
+      "min_improvement_threshold": 0.02,
+      "max_no_improvement_iterations": 2,
+      "deepseek_api_key": "sk-ceea9c92478e41c2bd9414325bfd311e",
+      "deepseek_model": "deepseek-chat",
+      "divergence_threshold": 0.1,
+      "adaptation_rate": 0.2,
+      "simulation_mode": true,
+      "enable_true_adversarial": true
+    },
+    "llm_mode": "增强数据集+DeepSeek LLM+真实对抗训练",
+    "true_adversarial_enabled": true,
+    "best_samples": [
+      "1 42 137 892 4503 11258 15672",
+      "1972 1942",
+      "2 315 7834 12045 15623 16789 17201",
+      "2049 2017 2016",
+      "3 127 5 18 94",
+      "1994 2017",
+      "4 888 12345 13456 14567 15678",
+      "5 100",
+      "5 73 500 1500 2500 3500 4500 5500 6500",
+      "6 204 3000 6000 9000 12000 15000",
+      "7 511 42 4242 424",
+      "8 999 1999 2999 3999 4999 5999",
+      "90 1990 2010",
+      "9 66 666 6666",
+      "1980 2018",
+      "10 0 1 2 3 4 5 6 7 8",
+      "1 0 16",
+      "2 65 50 8681",
+      "3 1 2000",
+      "4 1000 1999",
+      "5 3 15 2 10",
+      "1 42 137 892 4512 7834 11209 15672",
+      "2 315 56 2345 6789 12345 16789",
+      "3 789 345 678 9012 13456 15789 17234",
+      "4 127 12 3456 7890 12345 14567 16789"
+    ],
+    "final_metrics": {
+      "total_execution_time": 1027.6538076400757,
+      "total_iterations": 3,
+      "best_convergence_score": 0.9886049804119609,
+      "final_convergence_score": 0.987876723804954,
+      "best_quality_score": 0.5,
+      "total_generated_samples": 75,
+      "total_filtered_samples": 75,
+      "llm_mode": "增强数据集+DeepSeek LLM+真实对抗训练",
+      "dataset_enhancement_ratio": 1.2045919169680768,
+      "true_adversarial_iterations": 3,
+      "true_adversarial_usage_rate": 1.0
+    },
+    "comprehensive_evaluation": {
+      "adversarial_success_rate": 0.7894019301793471,
+      "long_tail_activation": 0.45,
+      "generalization_robustness": 0.6197009650896735,
+      "overall_innovation_score": 0.6197009650896735
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "experiment_metadata": {
+    "name": "Enhanced_Netflix_Adversarial_Standard",
+    "timestamp": "2025-06-26T17:40:02.014653",
+    "dataset_path": "D:\\VScode\\LLMRec-main\\data\\netflix\\item_attribute.csv",
+    "config": {
+      "experiment_name": "Netflix_Adversarial_Standard",
+      "enhancement_config": {
+        "augmentation_ratio": 0.3,
+        "diversity_boost": true,
+        "long_tail_emphasis": true,
+        "synthetic_users": 0.2
+      },
+      "framework_config": {
+        "max_iterations": 3,
+        "samples_per_iteration": 25,
+        "adversarial_rounds": 3,
+        "enable_true_adversarial": true,
+        "deepseek_api_key": "sk-11b5c8df89934b6f8cbda4e03d4f3a27"
+      }
+    },
+    "llm_provider": "DeepSeek",
+    "adversarial_mode": "True Adversarial"
+  },
+  "dataset_loading": {
+    "n_items": 17362,
+    "n_users": 1000,
+    "items_loaded": 17362,
+    "year_range": [
+      1896.0,
+      2005.0
+    ]
+  },
+  "dataset_enhancement": {
+    "diversity_boost": {
+      "users_enhanced": 51
+    },
+    "long_tail_emphasis": {
+      "long_tail_items": 0,
+      "users_enhanced": 0
+    },
+    "synthetic_users": {
+      "synthetic_users_added": 159
+    },
+    "user_augmentation": {
+      "users_augmented": 286
+    }
+  },
+  "framework_results": {
+    "dataset_info": {
+      "original_dataset": {
+        "users": 796,
+        "items": 17362,
+        "interactions": 6047
+      },
+      "enhanced_dataset": {
+        "users": 955,
+        "items": 17362,
+        "interactions": 7660
+      },
+      "enhancement_stats": {
+        "original_users": 796,
+        "enhanced_users": 955,
+        "original_interactions": 6359,
+        "enhanced_interactions": 7660,
+        "enhancement_ratio": 1.2045919169680768,
+        "strategies_applied": [
+          "diversity_boost",
+          "long_tail_emphasis",
+          "synthetic_users",
+          "user_augmentation"
+        ]
+      },
+      "dataset_metadata": {
+        "total_items": 17362,
+        "year_distribution": {
+          "count": 17362.0,
+          "mean": 1990.2672503167837,
+          "std": 16.48801426130136,
+          "min": 1896.0,
+          "25%": 1985.0,
+          "50%": 1997.0,
+          "75%": 2002.0,
+          "max": 2005.0
+        },
+        "sample_titles": [
+          "Catch 22",
+          "Crash Dive",
+          "Catch Me If You Can: Bonus Material",
+          "Tarzan 2",
+          "Just Before Dawn",
+          "Sleepaway Camp II: Unhappy Campers",
+          "Strait Jacket",
+          "Bewitched: Season 2",
+          "Eddie Griffin: Voodoo Child",
+          "Motley Crue: Carnival of Sins"
+        ],
+        "max_user_id": 954
+      }
+    },
+    "real_data_analysis": {
+      "feature_vector": [
+        8.020942408376964,
+        3.1472719262617015,
+        0.22229573633343813,
+        0.9989528795811519,
+        0.1596586265624087,
+        8.657280714860816,
+        0.8049608355091383,
+        0.35,
+        8.020942408376964,
+        3.1472719262617015,
+        8.0,
+        0.04502617801047121,
+        0.31099476439790574,
+        0.560313011658059,
+        0.2481675392670157,
+        0.7518324607329843,
+        0.0
+      ],
+      "user_stats": {
+        "mean": 8.020942408376964,
+        "std": 3.1472719262617015
+      },
+      "item_stats": {
+        "gini": 0.1596586265624087,
+        "long_tail_ratio": 0.65
+      }
+    },
+    "iterations": [
+      {
+        "iteration": 1,
+        "prompt_result": {
+          "optimized_prompt": "\n请生成推荐系统的用户-物品交互数据，要求如下：\n\n数据特征要求：\n1. 用户平均交互数约8.0个物品\n2. 物品流行度基尼系数约0.16\n3. 长尾物品比例约0.65\n\n格式要求：\n- 每行一个用户的交互记录\n- 格式：用户ID 物品ID1 物品ID2 物品ID3...\n- 用户ID范围：0-999，物品ID范围：0-499\n- 每个用户2-10个不重复物品交互\n\n请生成真实、多样化的推荐系统交互数据。\n",
+          "feedback": "首次生成，请确保数据真实性和多样性",
+          "iteration": 0,
+          "prompt_version": "v1",
+          "adjustment_details": {
+            "critical_dimensions": [],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 0.0
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 1427 5432 2189 8765 3412",
+          "2 7853 1098 5521",
+          "3 9621 3345 1122 7783",
+          "4 3467 8876 1324 4553 9991",
+          "5 6589 2233 5511",
+          "6 1123 4455 6677 8899",
+          "7 7744 6655 3322",
+          "8 4532 1234 5678",
+          "9 8876 4433 3344 1122",
+          "10 3345 7788 1122",
+          "1 3467",
+          "2 6589",
+          "3 1123",
+          "4 7744",
+          "5 8876",
+          "6 3345",
+          "0 83",
+          "0 72",
+          "0 91 5",
+          "1 14782 32567 44109 88204 77553",
+          "2 20935 55122 60984",
+          "3 33671 77802 99013 32567 20144 44512",
+          "4 48802 33456 41208",
+          "5 55213 77553 44109 72001",
+          "6 60324 20144 88901"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.9691294518968036,
+        "quality_metrics": {
+          "avg_quality": 0.86,
+          "rounds_completed": 3,
+          "final_sample_count": 25,
+          "deception_rate": 0.8000000000000002,
+          "adversarial_evolution": 3
+        },
+        "llm_used": true,
+        "true_adversarial_used": true,
+        "adversarial_details": {
+          "final_samples": [
+            "1 1427 5432 2189 8765 3412",
+            "2 7853 1098 5521",
+            "3 9621 3345 1122 7783",
+            "4 3467 8876 1324 4553 9991",
+            "5 6589 2233 5511",
+            "6 1123 4455 6677 8899",
+            "7 7744 6655 3322",
+            "8 4532 1234 5678",
+            "9 8876 4433 3344 1122",
+            "10 3345 7788 1122",
+            "1 3467",
+            "2 6589",
+            "3 1123",
+            "4 7744",
+            "5 8876",
+            "6 3345",
+            "0 83",
+            "0 72",
+            "0 91 5",
+            "1 14782 32567 44109 88204 77553",
+            "2 20935 55122 60984",
+            "3 33671 77802 99013 32567 20144 44512",
+            "4 48802 33456 41208",
+            "5 55213 77553 44109 72001",
+            "6 60324 20144 88901"
+          ],
+          "final_quality_score": 0.86,
+          "total_rounds": 3,
+          "avg_deception_rate": 0.8000000000000002,
+          "avg_quality_improvement": 0.6000000000000001,
+          "adversarial_evolution": 3,
+          "adversarial_summary": "完成3轮对抗博弈，平均欺骗率0.80",
+          "detailed_results": [
+            {
+              "round_idx": 0,
+              "discriminator_report": 

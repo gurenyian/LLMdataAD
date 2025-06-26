@@ -1,0 +1,161 @@
+{
+  "experiment_metadata": {
+    "name": "Enhanced_Netflix_Standard",
+    "timestamp": "2025-06-25T15:36:12.694661",
+    "dataset_path": "D:\\VScode\\LLMRec-main\\data\\netflix\\item_attribute.csv",
+    "config": {
+      "experiment_name": "Netflix_Standard",
+      "enhancement_config": {
+        "augmentation_ratio": 0.3,
+        "diversity_boost": true,
+        "long_tail_emphasis": true,
+        "synthetic_users": 0.2
+      },
+      "framework_config": {
+        "max_iterations": 3,
+        "samples_per_iteration": 25,
+        "deepseek_api_key": "sk-79237309ffe1458884dc0b0ea75238c6"
+      }
+    },
+    "llm_provider": "DeepSeek"
+  },
+  "dataset_loading": {
+    "n_items": 17362,
+    "n_users": 1000,
+    "items_loaded": 17362,
+    "year_range": [
+      1896.0,
+      2005.0
+    ]
+  },
+  "dataset_enhancement": {
+    "diversity_boost": {
+      "users_enhanced": 51
+    },
+    "long_tail_emphasis": {
+      "long_tail_items": 0,
+      "users_enhanced": 0
+    },
+    "synthetic_users": {
+      "synthetic_users_added": 159
+    },
+    "user_augmentation": {
+      "users_augmented": 286
+    }
+  },
+  "framework_results": {
+    "dataset_info": {
+      "original_dataset": {
+        "users": 796,
+        "items": 17362,
+        "interactions": 6047
+      },
+      "enhanced_dataset": {
+        "users": 955,
+        "items": 17362,
+        "interactions": 7660
+      },
+      "enhancement_stats": {
+        "original_users": 796,
+        "enhanced_users": 955,
+        "original_interactions": 6359,
+        "enhanced_interactions": 7660,
+        "enhancement_ratio": 1.2045919169680768,
+        "strategies_applied": [
+          "diversity_boost",
+          "long_tail_emphasis",
+          "synthetic_users",
+          "user_augmentation"
+        ]
+      },
+      "dataset_metadata": {
+        "total_items": 17362,
+        "year_distribution": {
+          "count": 17362.0,
+          "mean": 1990.2672503167837,
+          "std": 16.48801426130136,
+          "min": 1896.0,
+          "25%": 1985.0,
+          "50%": 1997.0,
+          "75%": 2002.0,
+          "max": 2005.0
+        },
+        "sample_titles": [
+          "Catch 22",
+          "Crash Dive",
+          "Catch Me If You Can: Bonus Material",
+          "Tarzan 2",
+          "Just Before Dawn",
+          "Sleepaway Camp II: Unhappy Campers",
+          "Strait Jacket",
+          "Bewitched: Season 2",
+          "Eddie Griffin: Voodoo Child",
+          "Motley Crue: Carnival of Sins"
+        ],
+        "max_user_id": 954
+      }
+    },
+    "real_data_analysis": {
+      "feature_vector": [
+        8.020942408376964,
+        3.1472719262617015,
+        0.22229573633343813,
+        0.9989528795811519,
+        0.1596586265624087,
+        8.657280714860816,
+        0.8049608355091383,
+        0.35,
+        8.020942408376964,
+        3.1472719262617015,
+        8.0,
+        0.04502617801047121,
+        0.31099476439790574,
+        0.560313011658059,
+        0.2481675392670157,
+        0.7518324607329843,
+        0.0
+      ],
+      "user_stats": {
+        "mean": 8.020942408376964,
+        "std": 3.1472719262617015
+      },
+      "item_stats": {
+        "gini": 0.1596586265624087,
+        "long_tail_ratio": 0.65
+      }
+    },
+    "iterations": [],
+    "convergence_history": [],
+    "quality_history": [],
+    "config": {
+      "max_iterations": 3,
+      "samples_per_iteration": 25,
+      "adversarial_rounds": 3,
+      "quality_threshold": 0.7,
+      "convergence_tolerance": 0.05,
+      "early_stopping": true,
+      "min_improvement_threshold": 0.02,
+      "max_no_improvement_iterations": 2,
+      "deepseek_api_key": "sk-79237309ffe1458884dc0b0ea75238c6",
+      "deepseek_model": "deepseek-chat"
+    },
+    "llm_mode": "增强数据集+DeepSeek LLM",
+    "final_metrics": {
+      "total_execution_time": 303.99977922439575,
+      "total_iterations": 0,
+      "best_convergence_score": 0,
+      "final_convergence_score": 0,
+      "best_quality_score": 0,
+      "total_generated_samples": 0,
+      "total_filtered_samples": 0,
+      "llm_mode": "增强数据集+DeepSeek LLM",
+      "dataset_enhancement_ratio": 1.2045919169680768
+    },
+    "comprehensive_evaluation": {
+      "adversarial_success_rate": 0.4,
+      "long_tail_activation": 0.45,
+      "generalization_robustness": 0.42500000000000004,
+      "overall_innovation_score": 0.42500000000000004
+    }
+  }
+}

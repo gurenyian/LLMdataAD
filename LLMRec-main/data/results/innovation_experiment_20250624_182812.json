@@ -1,0 +1,41 @@
+{
+  "experiment_metadata": {
+    "experiment_name": "LLM_Rec_Innovation_Complete",
+    "timestamp": "2025-06-24T18:28:12.941241",
+    "total_execution_time": 10.5,
+    "iterations_completed": 5,
+    "real_data_samples": 100
+  },
+  "comprehensive_evaluation": {
+    "innovation_score": 0.649816047538945,
+    "adversarial_evaluation": {
+      "adversarial_success_rate": 0.7802857225639666,
+      "consistency_score": 0.6468055921327309
+    },
+    "long_tail_evaluation": {
+      "long_tail_coverage_rate": 0.592797576724562,
+      "long_tail_frequency_boost": -0.05320164389913921,
+      "head_tail_balance_score": 0.4232334448672798
+    },
+    "robustness_evaluation": {
+      "overall_robustness_score": 0.7095304694689628,
+      "robustness_grade": "Good"
+    }
+  },
+  "convergence_analysis": {
+    "convergence_trend": {
+      "trend": "converging",
+      "initial_divergence": 0.5,
+      "final_divergence": 0.2,
+      "total_improvement": 0.3
+    },
+    "final_retention_rate": 0.8598528437324806
+  },
+  "performance_metrics": {
+    "avg_iteration_time": 3.5,
+    "total_samples_generated": 200,
+    "total_samples_retained": 150,
+    "overall_retention_rate": 0.75
+  },
+  "experiment_summary": "\n简化版LLM推荐技术创新实验总结\n==============================\n\n本次运行了简化版的创新实验框架，展示了以下功能：\n\n✅ 数据加载与预处理\n✅ 基础评估指标计算  \n✅ 创新指标模拟计算\n✅ 结果保存与报告生成\n\n创新评分: 0.650\n评估等级: 良好\n\n注意：这是简化版本的演示，实际的完整框架需要所有核心模块完整实现。\n                "
+}

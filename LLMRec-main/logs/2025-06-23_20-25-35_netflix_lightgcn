@@ -1,0 +1,110 @@
+2025-06-23 20:25:  PID: 28524
+2025-06-23 20:25:  Namespace(data_path='./data/', seed=2022, dataset='netflix', verbose=5, epoch=1000, regs='[1e-5,1e-5,1e-2]', embed_size=64, weight_size='[64, 64]', early_stopping_patience=7, mess_dropout='[0.1, 0.1]', sparse=1, debug=False, norm_type='sym', gpu_id=0, Ks='[10, 20, 50]', test_flag='part', sc=1.0, feat_reg_decay=1e-05, title='try_to_draw_line', cf_model='lightgcn', point='', batch_size=1024, lr=0.0001, de_lr=0.0002, weight_decay=0.0001, layers=1, drop_rate=0.0, mask_rate=0.0, mask=False, user_cat_rate=2.8, item_cat_rate=0.005, model_cat_rate=0.02, de_drop1=0.31, de_drop2=0.5, aug_mf_rate=0.012, prune_loss_drop_rate=0.71, mm_mf_rate=0.0001, feat_loss_type='sce', att_re_rate=0.0, alpha_l=2, aug_sample_rate=0.1, mf_emb_rate=0.0)
+2025-06-23 20:25:  Trainer initialization completed successfully
+2025-06-23 20:25:  Starting epoch 0 with 68 batches
+2025-06-23 20:25:  Epoch 0 [6.2s]: train==[35.57822=35.21633 + 0.00000 + 0.00000]
+2025-06-23 20:26:  Epoch 0: recall=[0.04770, 0.07751], precision=[0.00477, 0.00388], ndcg=[0.02489, 0.03245]
+2025-06-23 20:26:  Starting epoch 1 with 68 batches
+2025-06-23 20:26:  Starting epoch 2 with 68 batches
+2025-06-23 20:26:  Starting epoch 3 with 68 batches
+2025-06-23 20:26:  Starting epoch 4 with 68 batches
+2025-06-23 20:26:  Starting epoch 5 with 68 batches
+2025-06-23 20:26:  Epoch 5 [5.9s]: train==[22.38093=22.33005 + 0.00000 + 0.00000]
+2025-06-23 20:26:  Epoch 5: recall=[0.04282, 0.07534], precision=[0.00428, 0.00377], ndcg=[0.02122, 0.02946]
+2025-06-23 20:26:  Early stopping steps: 1
+2025-06-23 20:26:  Starting epoch 6 with 68 batches
+2025-06-23 20:26:  Starting epoch 7 with 68 batches
+2025-06-23 20:26:  Starting epoch 8 with 68 batches
+2025-06-23 20:27:  Starting epoch 9 with 68 batches
+2025-06-23 20:27:  Starting epoch 10 with 68 batches
+2025-06-23 20:27:  Epoch 10 [6.0s]: train==[21.01839=20.97561 + 0.00000 + 0.00000]
+2025-06-23 20:27:  Epoch 10: recall=[0.03794, 0.06612], precision=[0.00379, 0.00331], ndcg=[0.01755, 0.02462]
+2025-06-23 20:27:  Early stopping steps: 2
+2025-06-23 20:27:  Starting epoch 11 with 68 batches
+2025-06-23 20:27:  Starting epoch 12 with 68 batches
+2025-06-23 20:27:  Starting epoch 13 with 68 batches
+2025-06-23 20:27:  Starting epoch 14 with 68 batches
+2025-06-23 20:27:  Starting epoch 15 with 68 batches
+2025-06-23 20:27:  Epoch 15 [6.1s]: train==[20.03772=20.00114 + 0.00000 + 0.00000]
+2025-06-23 20:28:  Epoch 15: recall=[0.03794, 0.06287], precision=[0.00379, 0.00314], ndcg=[0.01645, 0.02271]
+2025-06-23 20:28:  Early stopping steps: 3
+2025-06-23 20:28:  Starting epoch 16 with 68 batches
+2025-06-23 20:28:  Starting epoch 17 with 68 batches
+2025-06-23 20:28:  Starting epoch 18 with 68 batches
+2025-06-23 20:28:  Starting epoch 19 with 68 batches
+2025-06-23 20:28:  Starting epoch 20 with 68 batches
+2025-06-23 20:28:  Epoch 20 [6.2s]: train==[19.50676=19.47267 + 0.00000 + 0.00000]
+2025-06-23 20:28:  Epoch 20: recall=[0.03902, 0.06450], precision=[0.00390, 0.00322], ndcg=[0.01634, 0.02280]
+2025-06-23 20:28:  Early stopping steps: 4
+2025-06-23 20:28:  Starting epoch 21 with 68 batches
+2025-06-23 20:28:  Starting epoch 22 with 68 batches
+2025-06-23 20:29:  Starting epoch 23 with 68 batches
+2025-06-23 20:29:  Starting epoch 24 with 68 batches
+2025-06-23 20:29:  Starting epoch 25 with 68 batches
+2025-06-23 20:29:  Epoch 25 [6.1s]: train==[19.03560=19.00423 + 0.00000 + 0.00000]
+2025-06-23 20:29:  Epoch 25: recall=[0.05366, 0.07805], precision=[0.00537, 0.00390], ndcg=[0.02633, 0.03251]
+2025-06-23 20:29:  Starting epoch 26 with 68 batches
+2025-06-23 20:29:  Starting epoch 27 with 68 batches
+2025-06-23 20:29:  Starting epoch 28 with 68 batches
+2025-06-23 20:29:  Starting epoch 29 with 68 batches
+2025-06-23 20:29:  Starting epoch 30 with 68 batches
+2025-06-23 20:30:  Epoch 30 [6.2s]: train==[18.26033=18.23054 + 0.00000 + 0.00000]
+2025-06-23 20:30:  Epoch 30: recall=[0.03089, 0.06179], precision=[0.00309, 0.00309], ndcg=[0.01294, 0.02064]
+2025-06-23 20:30:  Early stopping steps: 1
+2025-06-23 20:30:  Starting epoch 31 with 68 batches
+2025-06-23 20:30:  Starting epoch 32 with 68 batches
+2025-06-23 20:30:  Starting epoch 33 with 68 batches
+2025-06-23 20:30:  Starting epoch 34 with 68 batches
+2025-06-23 20:30:  Starting epoch 35 with 68 batches
+2025-06-23 20:30:  Epoch 35 [6.4s]: train==[17.45230=17.42388 + 0.00000 + 0.00000]
+2025-06-23 20:30:  Epoch 35: recall=[0.03523, 0.06179], precision=[0.00352, 0.00309], ndcg=[0.01409, 0.02074]
+2025-06-23 20:30:  Early stopping steps: 2
+2025-06-23 20:30:  Starting epoch 36 with 68 batches
+2025-06-23 20:31:  Starting epoch 37 with 68 batches
+2025-06-23 20:31:  Starting epoch 38 with 68 batches
+2025-06-23 20:31:  Starting epoch 39 with 68 batches
+2025-06-23 20:31:  Starting epoch 40 with 68 batches
+2025-06-23 20:31:  Epoch 40 [6.2s]: train==[17.39797=17.37145 + 0.00000 + 0.00000]
+2025-06-23 20:31:  Epoch 40: recall=[0.03252, 0.05799], precision=[0.00325, 0.00290], ndcg=[0.01296, 0.01939]
+2025-06-23 20:31:  Early stopping steps: 3
+2025-06-23 20:31:  Starting epoch 41 with 68 batches
+2025-06-23 20:31:  Starting epoch 42 with 68 batches
+2025-06-23 20:31:  Starting epoch 43 with 68 batches
+2025-06-23 20:31:  Starting epoch 44 with 68 batches
+2025-06-23 20:32:  Starting epoch 45 with 68 batches
+2025-06-23 20:32:  Epoch 45 [6.2s]: train==[16.12847=16.10298 + 0.00000 + 0.00000]
+2025-06-23 20:32:  Epoch 45: recall=[0.03306, 0.06775], precision=[0.00331, 0.00339], ndcg=[0.01425, 0.02308]
+2025-06-23 20:32:  Early stopping steps: 4
+2025-06-23 20:32:  Starting epoch 46 with 68 batches
+2025-06-23 20:32:  Starting epoch 47 with 68 batches
+2025-06-23 20:32:  Starting epoch 48 with 68 batches
+2025-06-23 20:32:  Starting epoch 49 with 68 batches
+2025-06-23 20:32:  Starting epoch 50 with 68 batches
+2025-06-23 20:32:  Epoch 50 [6.1s]: train==[16.07675=16.05223 + 0.00000 + 0.00000]
+2025-06-23 20:33:  Epoch 50: recall=[0.02818, 0.05095], precision=[0.00282, 0.00255], ndcg=[0.01368, 0.01952]
+2025-06-23 20:33:  Early stopping steps: 5
+2025-06-23 20:33:  Starting epoch 51 with 68 batches
+2025-06-23 20:33:  Starting epoch 52 with 68 batches
+2025-06-23 20:33:  Starting epoch 53 with 68 batches
+2025-06-23 20:33:  Starting epoch 54 with 68 batches
+2025-06-23 20:33:  Starting epoch 55 with 68 batches
+2025-06-23 20:33:  Epoch 55 [6.3s]: train==[15.58895=15.56536 + 0.00000 + 0.00000]
+2025-06-23 20:33:  Epoch 55: recall=[0.02981, 0.05854], precision=[0.00298, 0.00293], ndcg=[0.01327, 0.02045]
+2025-06-23 20:33:  Early stopping steps: 6
+2025-06-23 20:33:  Starting epoch 56 with 68 batches
+2025-06-23 20:33:  Starting epoch 57 with 68 batches
+2025-06-23 20:33:  Starting epoch 58 with 68 batches
+2025-06-23 20:34:  Starting epoch 59 with 68 batches
+2025-06-23 20:34:  Starting epoch 60 with 68 batches
+2025-06-23 20:34:  Epoch 60 [6.1s]: train==[15.36677=15.34419 + 0.00000 + 0.00000]
+2025-06-23 20:34:  Epoch 60: recall=[0.03252, 0.05583], precision=[0.00325, 0.00279], ndcg=[0.01470, 0.02063]
+2025-06-23 20:34:  Early stopping steps: 7
+2025-06-23 20:34:  Starting epoch 61 with 68 batches
+2025-06-23 20:34:  Starting epoch 62 with 68 batches
+2025-06-23 20:34:  Starting epoch 63 with 68 batches
+2025-06-23 20:34:  Starting epoch 64 with 68 batches
+2025-06-23 20:34:  Starting epoch 65 with 68 batches
+2025-06-23 20:34:  Epoch 65 [6.3s]: train==[14.98715=14.96538 + 0.00000 + 0.00000]
+2025-06-23 20:35:  Epoch 65: recall=[0.03144, 0.05366], precision=[0.00314, 0.00268], ndcg=[0.01355, 0.01919]
+2025-06-23 20:35:  Early stop!
+2025-06-23 20:35:  Training completed. Best recall: 0.0780487804878047

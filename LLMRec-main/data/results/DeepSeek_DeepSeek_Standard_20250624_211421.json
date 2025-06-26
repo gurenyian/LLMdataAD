@@ -1,0 +1,182 @@
+{
+  "experiment_metadata": {
+    "name": "DeepSeek_DeepSeek_Standard",
+    "timestamp": "2025-06-24T21:14:21.872976",
+    "config": {
+      "experiment_name": "DeepSeek_Standard",
+      "data_config": {
+        "n_users": 1000,
+        "n_items": 500,
+        "n_train_users": 200,
+        "max_interactions": 12
+      },
+      "framework_config": {
+        "max_iterations": 4,
+        "samples_per_iteration": 30,
+        "deepseek_api_key": ""
+      }
+    },
+    "llm_provider": "DeepSeek"
+  },
+  "data_summary": {
+    "users_generated": 200,
+    "total_interactions": 654,
+    "avg_interactions_per_user": 3.27
+  },
+  "framework_results": {
+    "real_data_analysis": {
+      "feature_vector": [
+        3.27,
+        2.580135655348377,
+        0.390474006116208,
+        0.64,
+        0.305,
+        0.055,
+        1.924592840041454,
+        2.422222222222222,
+        4.20311465933374,
+        0.4573451126967946,
+        0.9444444444444444,
+        0.21851851851851853,
+        0.5196885067012601,
+        0.54,
+        0.5148148148148148,
+        3.27,
+        2.580135655348377,
+        1.9245928309236917,
+        0.390474006116208,
+        0.99843,
+        0.00157,
+        0.2,
+        0.54
+      ],
+      "user_stats": {
+        "mean": 3.27,
+        "std": 2.580135655348377,
+        "gini": 0.390474006116208,
+        "quantiles": [
+          1.0,
+          1.0,
+          2.0,
+          4.0,
+          6.0
+        ],
+        "entropy": 1.924592840041454,
+        "user_type_ratios": {
+          "low_active": 0.64,
+          "mid_active": 0.305,
+          "high_active": 0.055
+        },
+        "max_activity": 12,
+        "min_activity": 1,
+        "unique_users": 200
+      },
+      "item_stats": {
+        "mean": 2.422222222222222,
+        "std": 4.20311465933374,
+        "gini": 0.4573451126967946,
+        "long_tail_ratio": 0.9444444444444444,
+        "head_ratio": 0.21851851851851853,
+        "entropy": 0.5196885067012601,
+        "category_ratios": {
+          "cold_start": 0.5148148148148148,
+          "low_popularity": 0.42962962962962964,
+          "mid_popularity": 0.044444444444444446,
+          "high_popularity": 0.011111111111111112
+        },
+        "max_popularity": 50,
+        "unique_items": 270,
+        "coverage": 0.54
+      },
+      "interaction_stats": {
+        "avg_session_length": 3.27,
+        "session_length_std": 2.580135655348377,
+        "session_length_dist": [
+          53,
+          49,
+          26,
+          30,
+          15,
+          10,
+          4,
+          2,
+          0,
+          1,
+          4,
+          6
+        ],
+        "session_entropy": 1.9245928309236917,
+        "max_session_length": 12,
+        "min_session_length": 1,
+        "session_length_gini": 0.390474006116208,
+        "avg_interaction_interval": 72.49779735682819,
+        "interaction_interval_std": 94.56668506754258
+      },
+      "sparsity_stats": {
+        "overall_sparsity": 0.99843,
+        "interaction_density": 0.00157,
+        "avg_interactions_per_user": 0.785,
+        "avg_interactions_per_item": 1.57,
+        "user_coverage": 0.2,
+        "item_coverage": 0.54
+      },
+      "feature_names": [
+        "user_mean_activity",
+        "user_activity_std",
+        "user_activity_gini",
+        "low_active_ratio",
+        "mid_active_ratio",
+        "high_active_ratio",
+        "user_entropy",
+        "item_mean_popularity",
+        "item_popularity_std",
+        "item_popularity_gini",
+        "long_tail_ratio",
+        "head_ratio",
+        "item_entropy",
+        "item_coverage",
+        "cold_start_ratio",
+        "avg_session_length",
+        "session_length_std",
+        "session_entropy",
+        "session_gini",
+        "overall_sparsity",
+        "interaction_density",
+        "user_coverage",
+        "item_coverage"
+      ]
+    },
+    "iterations": [],
+    "convergence_history": [],
+    "quality_history": [],
+    "config": {
+      "max_iterations": 4,
+      "samples_per_iteration": 30,
+      "adversarial_rounds": 3,
+      "quality_threshold": 0.7,
+      "convergence_tolerance": 0.05,
+      "early_stopping": true,
+      "min_improvement_threshold": 0.02,
+      "max_no_improvement_iterations": 3,
+      "deepseek_api_key": "",
+      "deepseek_model": "deepseek-chat"
+    },
+    "llm_mode": "模拟",
+    "final_metrics": {
+      "total_execution_time": 0.47499942779541016,
+      "total_iterations": 0,
+      "best_convergence_score": 0,
+      "final_convergence_score": 0,
+      "best_quality_score": 0,
+      "total_generated_samples": 0,
+      "total_filtered_samples": 0,
+      "llm_mode": "模拟"
+    },
+    "comprehensive_evaluation": {
+      "adversarial_success_rate": 0.4,
+      "long_tail_activation": 0.45,
+      "generalization_robustness": 0.42500000000000004,
+      "overall_innovation_score": 0.42500000000000004
+    }
+  }
+}

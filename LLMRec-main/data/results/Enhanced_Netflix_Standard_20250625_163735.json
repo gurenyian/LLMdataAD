@@ -1,0 +1,359 @@
+{
+  "experiment_metadata": {
+    "name": "Enhanced_Netflix_Standard",
+    "timestamp": "2025-06-25T16:37:35.919064",
+    "dataset_path": "D:\\VScode\\LLMRec-main\\data\\netflix\\item_attribute.csv",
+    "config": {
+      "experiment_name": "Netflix_Standard",
+      "enhancement_config": {
+        "augmentation_ratio": 0.3,
+        "diversity_boost": true,
+        "long_tail_emphasis": true,
+        "synthetic_users": 0.2
+      },
+      "framework_config": {
+        "max_iterations": 3,
+        "samples_per_iteration": 25,
+        "deepseek_api_key": "sk-79237309ffe1458884dc0b0ea75238c6"
+      }
+    },
+    "llm_provider": "DeepSeek"
+  },
+  "dataset_loading": {
+    "n_items": 17362,
+    "n_users": 1000,
+    "items_loaded": 17362,
+    "year_range": [
+      1896.0,
+      2005.0
+    ]
+  },
+  "dataset_enhancement": {
+    "diversity_boost": {
+      "users_enhanced": 51
+    },
+    "long_tail_emphasis": {
+      "long_tail_items": 0,
+      "users_enhanced": 0
+    },
+    "synthetic_users": {
+      "synthetic_users_added": 159
+    },
+    "user_augmentation": {
+      "users_augmented": 286
+    }
+  },
+  "framework_results": {
+    "dataset_info": {
+      "original_dataset": {
+        "users": 796,
+        "items": 17362,
+        "interactions": 6047
+      },
+      "enhanced_dataset": {
+        "users": 955,
+        "items": 17362,
+        "interactions": 7660
+      },
+      "enhancement_stats": {
+        "original_users": 796,
+        "enhanced_users": 955,
+        "original_interactions": 6359,
+        "enhanced_interactions": 7660,
+        "enhancement_ratio": 1.2045919169680768,
+        "strategies_applied": [
+          "diversity_boost",
+          "long_tail_emphasis",
+          "synthetic_users",
+          "user_augmentation"
+        ]
+      },
+      "dataset_metadata": {
+        "total_items": 17362,
+        "year_distribution": {
+          "count": 17362.0,
+          "mean": 1990.2672503167837,
+          "std": 16.48801426130136,
+          "min": 1896.0,
+          "25%": 1985.0,
+          "50%": 1997.0,
+          "75%": 2002.0,
+          "max": 2005.0
+        },
+        "sample_titles": [
+          "Catch 22",
+          "Crash Dive",
+          "Catch Me If You Can: Bonus Material",
+          "Tarzan 2",
+          "Just Before Dawn",
+          "Sleepaway Camp II: Unhappy Campers",
+          "Strait Jacket",
+          "Bewitched: Season 2",
+          "Eddie Griffin: Voodoo Child",
+          "Motley Crue: Carnival of Sins"
+        ],
+        "max_user_id": 954
+      }
+    },
+    "real_data_analysis": {
+      "feature_vector": [
+        8.020942408376964,
+        3.1472719262617015,
+        0.22229573633343813,
+        0.9989528795811519,
+        0.1596586265624087,
+        8.657280714860816,
+        0.8049608355091383,
+        0.35,
+        8.020942408376964,
+        3.1472719262617015,
+        8.0,
+        0.04502617801047121,
+        0.31099476439790574,
+        0.560313011658059,
+        0.2481675392670157,
+        0.7518324607329843,
+        0.0
+      ],
+      "user_stats": {
+        "mean": 8.020942408376964,
+        "std": 3.1472719262617015
+      },
+      "item_stats": {
+        "gini": 0.1596586265624087,
+        "long_tail_ratio": 0.65
+      }
+    },
+    "iterations": [
+      {
+        "iteration": 1,
+        "prompt_result": {
+          "optimized_prompt": "\n请生成推荐系统的用户-物品交互数据，要求如下：\n\n数据特征要求：\n1. 用户平均交互数约8.0个物品\n2. 物品流行度基尼系数约0.16\n3. 长尾物品比例约0.65\n\n格式要求：\n- 每行一个用户的交互记录\n- 格式：用户ID 物品ID1 物品ID2 物品ID3...\n- 用户ID范围：0-999，物品ID范围：0-499\n- 每个用户2-10个不重复物品交互\n\n请生成真实、多样化的推荐系统交互数据。\n",
+          "feedback": "首次生成，请确保数据真实性和多样性",
+          "iteration": 0,
+          "prompt_version": "v1",
+          "adjustment_details": {
+            "critical_dimensions": [],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 0.0
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 12 342 12589 8921 5632 17321 4218 7654",
+          "2 45 87 4321 15673 892 3456 12765",
+          "3 78 5432 8765 321 15672 43 9876 15432 765",
+          "4 123 12 6543 12876 543 987 4321 8765",
+          "5 256 7654 3210 9876 5432 10987 654 2198",
+          "6 312 432 15673 21 7654 987 5432 8765 1234",
+          "7 487 9876 543 12345 876 2345 7654 3210",
+          "8 532 6543 2198 765 4321 87 15672 5432",
+          "9 678 321 8765 15432 987 543 2198 7654 4321",
+          "10 789 5432 87 15673 432 7654 9876 3210 2198",
+          "1 7 8 0",
+          "87 432 5432 4 5",
+          "7654 9876 2 3",
+          "65 12589 15673 1",
+          "1900 1999",
+          "2000 2023",
+          "0 999",
+          "0 17361",
+          "2 10",
+          "0 16",
+          "1 42 137 892 4502 11234 15678 8901 12567",
+          "2 315 8765 4321 987 15623 3245 7612 11345",
+          "3 789 23 14567 876 5432 12890 15672 3456 9123",
+          "4 127 6543 2109 15789 321 8765 4321",
+          "5 543 12345 678 2345 7890 15623 432 9876"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.9856059037012841,
+        "quality_metrics": {
+          "avg_quality": 0.5,
+          "rounds_completed": 0,
+          "final_sample_count": 25
+        },
+        "llm_used": true
+      },
+      {
+        "iteration": 2,
+        "prompt_result": {
+          "optimized_prompt": "请生成推荐系统的用户-物品交互数据\n\n请按以下格式生成数据：每行一个用户的交互记录，格式为'用户ID 物品ID1 物品ID2 ...'，用户ID和物品ID都是正整数。",
+          "feedback": "第1轮优化建议：增加用户交互数量，提高平均活跃度；减少物品流行度集中度，增加分布均匀性",
+          "iteration": 1,
+          "prompt_version": "v2",
+          "adjustment_details": {
+            "critical_dimensions": [
+              "user_activity_mean",
+              "item_gini"
+            ],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 0.6150780764564336
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 0 125 8432 567 12980 42 8901 3200",
+          "2 1 15023 6721 45 11200 983 2010",
+          "3 2 8 76 543 1200 2300 4567 1980",
+          "4 3 17000 16892 42 150 7000 4",
+          "5 4 500 501 502 503 504 505 506",
+          "6 5 120 450 980 1500 3000 6000 9000 12000",
+          "7 6 15023 15024 15025 15026",
+          "8 7 80 85 800 805 8000 8005 0 5",
+          "9 8 200 12000 5500 300 13000",
+          "10 9 17000 17001 17002 17003 17004",
+          "1 35 10000 0 65",
+          "2 1 2000 1980",
+          "3 15000 15 0 16",
+          "4 5 4 2 8",
+          "5 4 7",
+          "1 12 542 12876 4301 8921 15743 3240",
+          "2 83 7654 11209 543 8721 15032",
+          "3 245 12387 657 4321 9876 15432 6210 731",
+          "4 367 3210 8765 14321 5421 76",
+          "5 498 15432 765 2198 5432 8765 3219",
+          "6 532 987 6543 12345 432 7654 2190",
+          "7 678 5432 7654 2198 3210 876",
+          "8 721 12876 542 4301 8921 15743 3240 11209",
+          "9 843 657 4321 9876 15432 6210",
+          "10 902 11209 543 8721 15032 7654 2198"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.9672590279268186,
+        "quality_metrics": {
+          "avg_quality": 0.5,
+          "rounds_completed": 0,
+          "final_sample_count": 25
+        },
+        "llm_used": true
+      },
+      {
+        "iteration": 3,
+        "prompt_result": {
+          "optimized_prompt": "请生成推荐系统的用户-物品交互数据\n\n请按以下格式生成数据：每行一个用户的交互记录，格式为'用户ID 物品ID1 物品ID2 ...'，用户ID和物品ID都是正整数。",
+          "feedback": "第2轮优化建议：增加用户交互数量，提高平均活跃度",
+          "iteration": 2,
+          "prompt_version": "v3",
+          "adjustment_details": {
+            "critical_dimensions": [
+              "user_activity_std",
+              "user_activity_mean"
+            ],
+            "adjustment_strategies": {},
+            "discriminator_feedback_used": false,
+            "js_divergence": 0.8874720720893933
+          }
+        },
+        "generated_count": 25,
+        "filtered_samples": [
+          "1 0 1254 8921 4567 15023 3218 7654",
+          "2 1 42 17865 12093 5432 8765",
+          "3 2 15678 4321 9876 6543 2109 543 8765 3210",
+          "4 3 765 12987 3456 8765 2345",
+          "5 4 12345 6789 4321 9876 5432 1098 6543",
+          "6 5 8765 1234 5678 9012 3456 7890",
+          "7 6 2345 6789 12345 9876 5432",
+          "8 7 3456 7890 1234 5678 9012 2345 6789",
+          "9 8 4567 8901 23456 7890 1234 5678",
+          "10 9 5678 9012 3456 78901 1234 4567 8901",
+          "1 2 8 5 6",
+          "2 35 15000",
+          "1000 3000",
+          "5000 7000",
+          "12000 14000",
+          "5 8765 1234",
+          "6 7 2 8",
+          "1 12 12543 8921 4567 3210 15432 8765",
+          "2 45 5678 12345 17360 4321 9876",
+          "3 78 3456 7890 11234 15876 5432 2109 876",
+          "4 123 7654 10987 14321 567 12389 456",
+          "5 256 4321 9876 5432 1234 8765 3210 6543",
+          "6 312 12345 6789 15432 876 543 2109",
+          "7 487 9876 5432 1234 5678 9012",
+          "8 532 6543 2109 8765 4321 987 1230"
+        ],
+        "filtered_count": 25,
+        "convergence_score": 0.9882988277493281,
+        "quality_metrics": {
+          "avg_quality": 0.5,
+          "rounds_completed": 0,
+          "final_sample_count": 25
+        },
+        "llm_used": true
+      }
+    ],
+    "convergence_history": [
+      0.9856059037012841,
+      0.9672590279268186,
+      0.9882988277493281
+    ],
+    "quality_history": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "config": {
+      "max_iterations": 3,
+      "samples_per_iteration": 25,
+      "adversarial_rounds": 3,
+      "quality_threshold": 0.7,
+      "convergence_tolerance": 0.05,
+      "early_stopping": true,
+      "min_improvement_threshold": 0.02,
+      "max_no_improvement_iterations": 2,
+      "deepseek_api_key": "sk-79237309ffe1458884dc0b0ea75238c6",
+      "deepseek_model": "deepseek-chat",
+      "divergence_threshold": 0.1,
+      "adaptation_rate": 0.2,
+      "simulation_mode": true
+    },
+    "llm_mode": "增强数据集+DeepSeek LLM",
+    "best_samples": [
+      "1 12 342 12589 8921 5632 17321 4218 7654",
+      "2 45 87 4321 15673 892 3456 12765",
+      "3 78 5432 8765 321 15672 43 9876 15432 765",
+      "4 123 12 6543 12876 543 987 4321 8765",
+      "5 256 7654 3210 9876 5432 10987 654 2198",
+      "6 312 432 15673 21 7654 987 5432 8765 1234",
+      "7 487 9876 543 12345 876 2345 7654 3210",
+      "8 532 6543 2198 765 4321 87 15672 5432",
+      "9 678 321 8765 15432 987 543 2198 7654 4321",
+      "10 789 5432 87 15673 432 7654 9876 3210 2198",
+      "1 7 8 0",
+      "87 432 5432 4 5",
+      "7654 9876 2 3",
+      "65 12589 15673 1",
+      "1900 1999",
+      "2000 2023",
+      "0 999",
+      "0 17361",
+      "2 10",
+      "0 16",
+      "1 42 137 892 4502 11234 15678 8901 12567",
+      "2 315 8765 4321 987 15623 3245 7612 11345",
+      "3 789 23 14567 876 5432 12890 15672 3456 9123",
+      "4 127 6543 2109 15789 321 8765 4321",
+      "5 543 12345 678 2345 7890 15623 432 9876"
+    ],
+    "final_metrics": {
+      "total_execution_time": 223.34844827651978,
+      "total_iterations": 3,
+      "best_convergence_score": 0.9882988277493281,
+      "final_convergence_score": 0.9882988277493281,
+      "best_quality_score": 0.5,
+      "total_generated_samples": 75,
+      "total_filtered_samples": 75,
+      "llm_mode": "增强数据集+DeepSeek LLM",
+      "dataset_enhancement_ratio": 1.2045919169680768
+    },
+    "comprehensive_evaluation": {
+      "adversarial_success_rate": 0.7843103358339816,
+      "long_tail_activation": 0.45,
+      "generalization_robustness": 0.6171551679169908,
+      "overall_innovation_score": 0.6171551679169908
+    }
+  }
+}

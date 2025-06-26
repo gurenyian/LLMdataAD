@@ -1,0 +1,2 @@
+2025-06-24 19:53:44,787 - INFO - 🚀 启动LLM推荐技术创新框架
+2025-06-24 19:53:45,079 - ERROR - ❌ 框架执行失败: 'RealisticDataGenerator' object has no attribute 'n_test'

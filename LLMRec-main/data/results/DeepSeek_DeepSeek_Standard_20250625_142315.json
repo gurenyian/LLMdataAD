@@ -1,0 +1,89 @@
+{
+  "experiment_metadata": {
+    "name": "DeepSeek_DeepSeek_Standard",
+    "timestamp": "2025-06-25T14:23:15.229813",
+    "config": {
+      "experiment_name": "DeepSeek_Standard",
+      "data_config": {
+        "n_users": 1000,
+        "n_items": 500,
+        "n_train_users": 200,
+        "max_interactions": 12
+      },
+      "framework_config": {
+        "max_iterations": 4,
+        "samples_per_iteration": 30,
+        "deepseek_api_key": "sk-79237309ffe1458884dc0b0ea75238c6"
+      }
+    },
+    "llm_provider": "DeepSeek"
+  },
+  "data_summary": {
+    "users_generated": 200,
+    "total_interactions": 654,
+    "avg_interactions_per_user": 3.27
+  },
+  "framework_results": {
+    "real_data_analysis": {
+      "feature_vector": [
+        3.27,
+        2.580135655348377,
+        0.390474006116208,
+        0.735,
+        0.4573451126967947,
+        5.053858710480897,
+        0.41284403669724773,
+        0.5443425076452599,
+        3.27,
+        2.580135655348377,
+        2.0,
+        0.64,
+        0.055,
+        0.3957821603968735,
+        0.865,
+        0.135,
+        0.0
+      ],
+      "user_stats": {
+        "mean": 3.27,
+        "std": 2.580135655348377
+      },
+      "item_stats": {
+        "gini": 0.4573451126967947,
+        "long_tail_ratio": 0.45565749235474007
+      }
+    },
+    "iterations": [],
+    "convergence_history": [],
+    "quality_history": [],
+    "config": {
+      "max_iterations": 4,
+      "samples_per_iteration": 30,
+      "adversarial_rounds": 3,
+      "quality_threshold": 0.7,
+      "convergence_tolerance": 0.05,
+      "early_stopping": true,
+      "min_improvement_threshold": 0.02,
+      "max_no_improvement_iterations": 3,
+      "deepseek_api_key": "sk-79237309ffe1458884dc0b0ea75238c6",
+      "deepseek_model": "deepseek-chat"
+    },
+    "llm_mode": "DeepSeek真实LLM",
+    "final_metrics": {
+      "total_execution_time": 263.9368369579315,
+      "total_iterations": 0,
+      "best_convergence_score": 0,
+      "final_convergence_score": 0,
+      "best_quality_score": 0,
+      "total_generated_samples": 0,
+      "total_filtered_samples": 0,
+      "llm_mode": "DeepSeek真实LLM"
+    },
+    "comprehensive_evaluation": {
+      "adversarial_success_rate": 0.4,
+      "long_tail_activation": 0.45,
+      "generalization_robustness": 0.42500000000000004,
+      "overall_innovation_score": 0.42500000000000004
+    }
+  }
+}
